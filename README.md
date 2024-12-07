@@ -1,5 +1,5 @@
 
-# Problem Solving with C by M.T Samashekara
+# Problem Solving with C by M.T Somashekara
 
 ## ℹ️ About 
 
