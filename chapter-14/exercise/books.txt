@@ -1,0 +1,5 @@
+1 J.K.Rowling 29.99 500 Bloomsbury 1997
+2 George_Orwell 19.99 328 Secker_Warburg 1949
+3 J.R.R.Tolkien 25.99 423 Allen_&_Unwin 1954
+4 F.Scott.Fitzgerald 15.99 180 Scribner 1925
+5 Harper_Lee 18.99 281 J.B.Lippincott_&_Co. 1960
