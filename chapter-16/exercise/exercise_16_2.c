@@ -1,22 +1,34 @@
 #include <stdio.h>
-#include <string.h>
-
-void twos_complement(char *binary_str) {
-    int len = strlen(binary_str);
-    int complement_started = 0;
-
-    for (int i = len - 1; i >= 0; i--) {
-        if (complement_started) {
-            binary_str[i] = (binary_str[i] == '1') ? '0' : '1';
-        } else if (binary_str[i] == '1') {
-            complement_started = 1;
+// 2's complement
+int twosComplement(int n){
+    int found = 0, mask, i;
+    for (i = 0; i < 16; i++){
+        mask = 1 << i;
+        if ((n & mask) != 0){   found = 1;
+        }
+        if(found){  n^=mask;
         }
     }
+    return n;
 }
-
-int main() {
-    char binary_number[] = "1001";
-    twos_complement(binary_number);
-    printf("2's complement of 1001 is %s\n", binary_number);
+void showBits(int n){
+    int i, mask, result;
+    for (i = 15; i >= 0; i--){
+        mask = 1 << i;
+        result = mask & n;
+        if (result != 0)     printf("1");
+        else    printf("0");
+    }
+    printf("\n");
+}
+int main(){
+    int n, result;
+    printf("Enter a Decimal number: ");
+    scanf("%d", &n);
+    printf("The Binary equivalent of %d = ", n);
+    showBits(n);
+    result = twosComplement(n);
+    printf("2's complement: ");
+    showBits(result);
     return 0;
 }
