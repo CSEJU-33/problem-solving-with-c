@@ -1,4 +1,4 @@
-//Example 13.1 To illustrate the concept of pointer arithmetic
+//Example 13.2 To illustrate the concept of pointer arithmetic
 #include<stdio.h>
 int main()
 {
@@ -13,6 +13,6 @@ int main()
     printf("After ip=ip+2    ip=%u\n", ip);
     ip=ip-2;
     printf("After ip=ip-2    ip=%u\n", ip);
-    
+
     return(0);
 }
